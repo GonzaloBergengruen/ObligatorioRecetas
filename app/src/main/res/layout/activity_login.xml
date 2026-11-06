@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7EF"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tus recetas"
+            android:textColor="#263730"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Guardá tus favoritas y encontralas cuando quieras."
+            android:textColor="#70786F"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:background="#FFFFFF"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="14dp" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:hint="Contraseña (mínimo 6 caracteres)"
+            android:inputType="textPassword"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="22dp"
+            android:backgroundTint="#2E6E52"
+            android:text="Ingresar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#E5EADF"
+            android:text="Crear una cuenta"
+            android:textAllCaps="false"
+            android:textColor="#263730" />
+    </LinearLayout>
+</ScrollView>

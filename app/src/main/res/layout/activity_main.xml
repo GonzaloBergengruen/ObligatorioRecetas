@@ -4,65 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FAF7EF"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:paddingStart="20dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp">
 
     <TextView
+        android:id="@+id/greetingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Coleccion de Recetas"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:text="RECETARIO"
+        android:textColor="#263730"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCrear"
+            android:id="@+id/newRecipeButton"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:backgroundTint="#646464"
-            android:text="Crear Receta"
-            android:textColorLink="#ff6750a4" />
+            android:backgroundTint="#2E6E52"
+            android:text="Nueva receta"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/btnAgregar"
+            android:id="@+id/searchButton"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginRight="5dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:backgroundTint="#646464"
-            android:text="Agregar Receta" />
-
-        <Button
-            android:id="@+id/btnBuscar"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="#646464"
-            android:text="Buscar Receta" />
-
-
+            android:backgroundTint="#2E6E52"
+            android:text="Explorar"
+            android:textAllCaps="false" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <TextView
+        android:id="@+id/recentLabel"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:text="TU ÚLTIMA RECETA"
+        android:textColor="#2E6E52"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
+    <TextView
+        android:id="@+id/collectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Mi colección"
+        android:textColor="#263730"
+        android:textSize="21sp"
+        android:textStyle="bold" />
 
+    <Spinner
+        android:id="@+id/categoryFilter"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:background="#FFFFFF" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:backgroundTint="#E5EADF"
+        android:text="Salir"
+        android:textAllCaps="false"
+        android:textColor="#263730" />
 </LinearLayout>
+
