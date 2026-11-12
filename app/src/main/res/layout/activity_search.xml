@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7EF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Explorar recetas"
+        android:textColor="#263730"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Busca en TheMealDB y guarda lo que te guste."
+        android:textColor="#70786F"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="18dp"
+        android:background="#FFFFFF"
+        android:hint="Pasta, pollo, chocolate…"
+        android:padding="12dp" />
+
+    <Spinner
+        android:id="@+id/searchCategory"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:id="@+id/searchSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2E6E52"
+        android:text="Buscar"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/searchStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textColor="#70786F"
+        android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/searchBack"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="#E5EADF"
+        android:text="Volver a mi colección"
+        android:textAllCaps="false"
+        android:textColor="#263730" />
+</LinearLayout>
