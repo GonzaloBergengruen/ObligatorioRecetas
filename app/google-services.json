@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621735656674",
+    "project_id": "obligatorio-9d9a7",
+    "storage_bucket": "obligatorio-9d9a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621735656674:android:7c8bd7edae29ef719032bb",
+        "android_client_info": {
+          "package_name": "com.example.obligatoriorecetas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUz4R4MQ-OaNIJAbKV4foKrWIQgez99yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
