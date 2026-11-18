@@ -21,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Recupera el servicio de autenticacion y el usuario de la sesion actual.
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
+        // Si no hay sesion, devuelve al usuario al login y no carga la pantalla principal.
         if (user == null) {
             openLoginActivity();
             return;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        // Al tocar Salir, cierra la sesion en Firebase y vuelve al login.
         Button logoutButton = findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(view -> {
             firebaseAuth.signOut();
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openLoginActivity() {
+        // Limpia la navegacion para que Atras no vuelva a la pantalla anterior.
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

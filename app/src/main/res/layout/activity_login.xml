@@ -58,6 +58,7 @@
             android:layout_height="54dp"
             android:layout_marginTop="22dp"
             android:backgroundTint="#2E6E52"
+            android:onClick="login"
             android:text="Ingresar"
             android:textAllCaps="false" />
 
@@ -67,6 +68,7 @@
             android:layout_height="54dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="#E5EADF"
+            android:onClick="registrar"
             android:text="Crear una cuenta"
             android:textAllCaps="false"
             android:textColor="#263730" />
