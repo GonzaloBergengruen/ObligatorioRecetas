@@ -24,11 +24,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //interfaz se dibuja hasta los bordes de la pantalla.
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-
-        // Ajusta el contenido para que no quede debajo de las barras del sistema.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.login), (view, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
