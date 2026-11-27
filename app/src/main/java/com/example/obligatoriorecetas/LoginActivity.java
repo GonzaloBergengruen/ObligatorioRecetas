@@ -83,7 +83,13 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(this, "Cuenta creada. Bienvenido!", Toast.LENGTH_SHORT).show();
                         openMainActivity();
                     } else {
-                        Toast.makeText(this, "No se pudo crear la cuenta. Revisa tus datos.", Toast.LENGTH_SHORT).show();
+                        Exception e = task.getException();
+
+                        String mensaje = e != null ? e.getMessage() : "Error desconocido";
+
+                        Toast.makeText(this, "Error al crear cuenta: " + mensaje, Toast.LENGTH_LONG).show();
+
+                        android.util.Log.e("FIREBASE_REGISTRO", "Error al registrar", e);
                     }
                 });
     }
