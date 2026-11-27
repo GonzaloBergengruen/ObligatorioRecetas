@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Guardá tus favoritas y encontralas cuando quieras."
+            android:text="Guardá tus recetas y encontralas cuando quieras."
             android:textColor="#70786F"
             android:textSize="15sp" />
 

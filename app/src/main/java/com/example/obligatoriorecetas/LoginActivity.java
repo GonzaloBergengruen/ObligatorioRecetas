@@ -16,7 +16,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // Referencias a los campos del formulario y al servicio de autenticación Firebase.
     private EditText emailInput;
     private EditText passwordInput;
     private FirebaseAuth firebaseAuth;
@@ -37,18 +36,18 @@ public class LoginActivity extends AppCompatActivity {
         emailInput = findViewById(R.id.emailInput);
         passwordInput = findViewById(R.id.passwordInput);
 
-        // Firebase conserva la sesion. si ya hay un usuario, no hace falta mostrar el login.
+        // Firebase conserva la sesion. si ya hay un usuario no hace falta mostrar el login.
         if (firebaseAuth.getCurrentUser() != null) {
             openMainActivity();
         }
     }
 
-    //login se ejecuta al tocar el boton con android:onClick="login" en el XML.
+    //login se ejecuta al tocar el boton con onClick="login" en el XML.
     public void login(View view) {
         String email = emailInput.getText().toString().trim();
         String password = passwordInput.getText().toString();
 
-        // comprueba si falta completar algun campo.
+        // se comprueba si falta completar algun campo.
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Completa el correo y la contraseña", Toast.LENGTH_SHORT).show();
             return;
@@ -66,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    // registrar se ejecuta al tocar el boton con android:onClick="registrar" en el XML.
+    // registrar se ejecuta al tocar el boton con onClick="registrar" en el XML.
     public void registrar(View view) {
         String email = emailInput.getText().toString().trim();
         String password = passwordInput.getText().toString();

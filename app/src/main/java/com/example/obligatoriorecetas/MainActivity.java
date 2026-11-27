@@ -23,13 +23,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    // Base de datos local, adaptador de la lista y recetas.
+    // Base de datos local, adaptador de la lista, recetas y Firebase.
     private RecipeDb db;
     private RecipeAdapter adapter;
     private final List<Recipe> visibleRecipes = new ArrayList<>();
     private Spinner categoryFilter;
-
-    // Firebase para comprobar y cerrar la sesion del usuario.
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Actualiza la lista al volver desde el formulario o desde otra pantalla.
+        // Actualiza la lista al volver desde otra pantalla.
         if (db != null && categoryFilter != null) {
             loadRecipes(categoryFilter.getSelectedItem().toString());
             showLastRecipe();

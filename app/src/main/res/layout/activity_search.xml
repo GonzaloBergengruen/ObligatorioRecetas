@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Busca en TheMealDB y guarda lo que te guste."
+        android:text="Busca en TheMealDB y guardalo en tus recetas."
         android:textColor="#70786F"
         android:textSize="14sp" />
 
